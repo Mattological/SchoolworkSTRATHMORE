@@ -1,0 +1,21 @@
+StockPort<-read.csv(file.choose())
+StockPort
+library(moments)
+library(DescTools)
+library(e1071)
+summary(StockPort)
+var(StockPort$APPLE)
+var(StockPort$NVIDIA)
+var(StockPort$MANCHESTER.UNITED)
+var(StockPort$BERKSHIRE)
+var(StockPort$ALPHABET)
+sapply(StockPort[,2:6],sd)
+sapply(StockPort[,2:6],skewness)
+sapply(StockPort[,2:6],kurtosis)
+Mode(StockPort$APPLE)
+Mode(StockPort$ALPHABET)
+Mode(StockPort$NVIDIA)
+Mode(StockPort$MANCHESTER.UNITED)
+Mode(StockPort$BERKSHIRE)
+plot(StockPort$APPLE type='l'
+
