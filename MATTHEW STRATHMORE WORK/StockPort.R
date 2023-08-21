@@ -17,5 +17,5 @@ Mode(StockPort$ALPHABET)
 Mode(StockPort$NVIDIA)
 Mode(StockPort$MANCHESTER.UNITED)
 Mode(StockPort$BERKSHIRE)
-plot(StockPort$APPLE type='l'
+plot(StockPort$APPLE type='l' col='purple' xlab='number of days'ylab='Prices' main='APPLE STOCK PRICE SERIES')
 
