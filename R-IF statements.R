@@ -1,7 +1,7 @@
 #IF STATEMENTS
 
 x<-5
-if(x==5){print ('X equals 5')}a
+if(x==5){print ('X equals 5')}
 #operators >,<,>=,<=,==
 x=6
 
@@ -39,7 +39,9 @@ for(i in 1:10){for(j in 1:5){Y[i,j]=i*j}}
 
 
 
-##functions
+##functions 
+#the function syntax is: userdefinedname<-function(parameters){curly braces contain the code blocks of the function}
+#every function must provude a result
 is_five<-function(num){if(num==5){print('X equals 5')}else{print('not five')}}
 is_five(6)
 is_five(5)
@@ -55,3 +57,26 @@ gender('M','F')
 #for legal and morally and acceptable marriage
 Marriage<-function(man,woman){if(man>18 &man<35){if(woman>18 & woman<35){print('Both are young adults and morally marriagable')}else if(woman<18){print('the young lady is underage and marriage should not be allowed')}else{print('the woman is overage and that marriage aint right')}}else if(man<18){print('Man is underage and marriage cannot be allowed')}else{print('man is overage and thus the marriage wouldnt be right')}}
 Marriage(23,17.5)
+
+
+
+addition<-function(x,y){sum<-x+y #note:separate the commands, unless conditional statements
+#ie do not put the sum<x+y and the return/print(sum) on the same line
+return(sum)}
+addition(2,3)
+multiply<-function(a,b){product<-a*b 
+return(product)}
+multiply(3,4)
+H<-matrix(0,10,5)
+oneFive<-function(Mat){ for (i in 1:10){for(j in 1:5){Mat[i,j]=i}} 
+print(Mat)}#do not put return/ print  on same line as code
+oneFive(H)
+volumeCone<-function(radius,height){
+Vol<-(radius*radius*height*22)/21
+return (Vol)}
+
+volumeCone(5,10)
+surfAreaCone<-function(length,radius){
+Area=(radius*length*22/7)+(radius*radius*22/7)
+return(Area)}
+surfAreaCone(6,7)
