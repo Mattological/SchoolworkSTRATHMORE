@@ -24,7 +24,8 @@ boy<-'M'
 #if(girl=='F'||boy=='M'){print('gender balanced')}else{print('things are not right')}
 
 #iterating through a matrix
-#this is syntax to design a matrix of 10 row and 1 comlumn
+#this is syntax to design a matrix of 10 row and 1 comlumn with each cell containing the value zero
+A<-matrix(1:10,)
 X<-matrix(0,10,1)
 X
 for(i in 1:10){X[i,1]=i}
@@ -68,8 +69,9 @@ multiply<-function(a,b){product<-a*b
 return(product)}
 multiply(3,4)
 H<-matrix(0,10,5)
+H
 oneFive<-function(Mat){ for (i in 1:10){for(j in 1:5){Mat[i,j]=i}} 
-print(Mat)}#do not put return/ print  on same line as code
+return(Mat) }#do not put return/ print  on same line as code
 oneFive(H)
 volumeCone<-function(radius,height){
 Vol<-(radius*radius*height*22)/21
@@ -80,3 +82,11 @@ surfAreaCone<-function(length,radius){
 Area=(radius*length*22/7)+(radius*radius*22/7)
 return(Area)}
 surfAreaCone(6,7)
+X<-c(1:10)
+
+
+reverseMatrix<-function(Matrix){Y<-matrix(0,10,5)#you must define the matrix outside the for loop.Otherwise it wont bypass the for loop local variable xtrics
+for(j in 1:5){for (i in 1:10){
+Y[11-i,j]<-Matrix[i]}}
+return (Y)}
+reverseMatrix(oneFive(H))
